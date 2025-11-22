@@ -2,9 +2,10 @@ import mongoose from "mongoose";
 
 const MessageSchema = new mongoose.Schema({
   topic: String,
-  devEUI: String,
-  data: Object,
+  u: Number,
+  m: String,
   timestamp: { type: Date, default: Date.now }
 });
 
 export default mongoose.model("Message", MessageSchema);
+
